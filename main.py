@@ -31,6 +31,12 @@ def pre_processing():
     ## Finding all the images in the folder
     # dataset/img_align_celeba/img_align_celeba
     item_list = glob.glob(dataset_path + '/img_align_celeba/img_align_celeba/*.jpg')
+
+    #sort item list
+    item_list = sorted(item_list, key=lambda x: x.split("/")[-1].split(".")[0])
+    print(item_list[:20])
+    
+
     generic_image_path = dataset_path + '/img_align_celeba/img_align_celeba/'
 
     item_evaluation = pd.read_csv(dataset_path + 'list_eval_partition.csv')
@@ -84,38 +90,48 @@ def pre_processing():
 
     label_df = pd.read_csv(dataset_path + 'list_attr_celeba.csv')
     print("Reading labels from: " + dataset_path + 'list_attr_celeba.csv')
-    column_list = pd.Series(list(label_df.columns)[1:])
-    print(column_list)
+    column_list = pd.Series(list(label_df.columns)[1:10])
+    # print(column_list)
 
     def label_generator(row):
-        return(' '.join(column_list[[True if i==1 else False for i in row[column_list]]]))
+        return(' '.join(column_list[[True if int(i)==1 else False for i in row[column_list]]]))
 
-    label_df['label'] = label_df.progress_apply(lambda x: label_generator(x), axis=1)
-    label_df = label_df.loc[:,['image_id','label']]
-    label_df.to_csv(processed_path +  'labels.csv')
+    label_df['labels'] = label_df.apply(lambda x: label_generator(x), axis=1)
+    label_df = label_df.loc[:,['image_id','labels']]
+    print("label DF")
+    print(label_df)
+    # label_df = label_df.loc[:,['image_id','label']]
+    #just writing the labels
+    print("Writing labels to " + processed_path +  'labels.csv')
+    # label_df.to_csv(processed_path +  'labels.csv')
 
     ## Attachhing label to correct file names
-    # item_list = glob.glob(dataset_path + 'dataset/img_align_celeba/img_align_celeba/*.jpg')
-    item_df = pd.DataFrame({'image_name':pd.Series(item_list).apply(lambda x: '/'.join(x.split('/')[-2]))})
-    item_df['image_id'] = item_df.image_name.apply(lambda x: x.split('/')[1])
+    # item_list = glob.glob(dataset_path + '/img_align_celeba/img_align_celeba/*.jpg')
+    item_df = pd.DataFrame({'image_name':pd.Series(item_list[1:50]).apply(lambda x: x.split('/')[-1])})
+    item_df['image_id'] = item_df.image_name
+    print(item_df) 
+
 
     ## Creating final label set
-    label_df = pd.read_csv(processed_path +  'labels.csv')
+    # label_df = pd.read_csv(processed_path +  'labels.csv')
     label_df = label_df.merge(item_df, on='image_id', how='inner')
-    label_df.rename(columns={'label':'tags'}, inplace=True)
-    label_df.loc[:,['image_name','tags']].to_csv(processed_path +  'labels.csv', index=False)
+    label_df.rename(columns={'image_name':'fname'}, inplace=True)
+    label_df.loc[:,['fname','labels']].to_csv(processed_path +  'labels.csv', index=False)
 
 
 
 
 if __name__ == "__main__":
-    pre_processing()
+    # pre_processing()
     # tfms = aug_transforms(pad_mode='zeros', mult=2, min_scale=0.5)
     # # tfms =  get_transforms(do_flip=False, flip_vert=False, max_rotate=30, max_lighting=0.3)
-    # df = pd.read_csv(dataset_path +'list_attr_celeba.csv)
+    df = pd.read_csv(processed_path +'labels.csv')
+    print(df.head())
 
-    # dls = ImageDataLoaders.from_df(df, dataset_path +'list_attr_celeba.csv', folder='train', valid_col='is_valid', label_delim=',',
-    #                            item_tfms=Resize(460), batch_tfms=aug_transforms(size=224))
+    dls = ImageDataLoaders.from_df(df, processed_path, folder='training/',label_delim=" ", header=df.head())
+
+    dls.show_batch()
+    #batch_tfms=aug_transforms(size=224)
 
     # # src = (ImageItemList.from_csv(path, csv_name=dataset_path +'list_attr_celeba.csv')
     # #    .split_by_valid_func(validation_func)
