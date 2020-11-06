@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 dataset/**
+processed_data/**/*.jpg
 
 # Distribution / packaging
 .Python
