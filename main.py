@@ -144,11 +144,20 @@ if __name__ == "__main__":
     image = image.permute(1, 2, 0).cpu().numpy()
     print(type(image))
     print(image.shape)
-    cv2.imshow("frame",image)
-    cv2.waitKey(0)  
+
+    print(dls.c,'\n',data.dls)
+
+    acc_02 = partial(accuracy_thresh, thresh=0.2)
+    acc_03 = partial(accuracy_thresh, thresh=0.3)
+    acc_04 = partial(accuracy_thresh, thresh=0.4)
+    acc_05 = partial(accuracy_thresh, thresh=0.5)
+    f_score = partial(fbeta, thresh=0.2)
+    learn = create_cnn(data, arch, metrics=[acc_02, acc_03, acc_04, acc_05, f_score])
+    # cv2.imshow("frame",image)
+    # cv2.waitKey(0)  
   
-    #closing all open windows  
-    cv2.destroyAllWindows()  
+    # #closing all open windows  
+    # cv2.destroyAllWindows()  
     #batch_tfms=aug_transforms(size=224)
 
     # # src = (ImageItemList.from_csv(path, csv_name=dataset_path +'list_attr_celeba.csv')
