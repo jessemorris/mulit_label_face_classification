@@ -6,6 +6,7 @@ import imutils
 import glob
 import cv2
 import shutil
+import torch
 from tqdm.notebook import tqdm
 print(fastai.__version__)
 pd.set_option('display.max_columns', 500)
@@ -90,7 +91,7 @@ def pre_processing():
 
     label_df = pd.read_csv(dataset_path + 'list_attr_celeba.csv')
     print("Reading labels from: " + dataset_path + 'list_attr_celeba.csv')
-    column_list = pd.Series(list(label_df.columns)[1:10])
+    column_list = pd.Series(list(label_df.columns)[1:])
     # print(column_list)
 
     def label_generator(row):
@@ -107,7 +108,7 @@ def pre_processing():
 
     ## Attachhing label to correct file names
     # item_list = glob.glob(dataset_path + '/img_align_celeba/img_align_celeba/*.jpg')
-    item_df = pd.DataFrame({'image_name':pd.Series(item_list[1:50]).apply(lambda x: x.split('/')[-1])})
+    item_df = pd.DataFrame({'image_name':pd.Series(item_list[0:50]).apply(lambda x: x.split('/')[-1].strip())})
     item_df['image_id'] = item_df.image_name
     print(item_df) 
 
@@ -116,7 +117,7 @@ def pre_processing():
     # label_df = pd.read_csv(processed_path +  'labels.csv')
     label_df = label_df.merge(item_df, on='image_id', how='inner')
     label_df.rename(columns={'image_name':'fname'}, inplace=True)
-    label_df.loc[:,['fname','labels']].to_csv(processed_path +  'labels.csv', index=False)
+    label_df.loc[:,['fname','labels']].to_csv(processed_path +  'labels.csv', index=False, sep=" ")
 
 
 
@@ -128,9 +129,26 @@ if __name__ == "__main__":
     df = pd.read_csv(processed_path +'labels.csv')
     print(df.head())
 
-    dls = ImageDataLoaders.from_df(df, processed_path, folder='training/',label_delim=" ", header=df.head())
+    # dls = ImageDataLoaders.from_df(df, processed_path, folder='training',label_delim=" ")
+    dls = ImageDataLoaders.from_csv(processed_path, 'labels.csv', folder="training", delimiter=" ",
+        bs=2, batch_tfms=aug_transforms(size=224))
 
-    dls.show_batch()
+    # print(dir(dls))
+    batch_images = dls.one_batch()
+    print(type(batch_images[0]))
+    print(batch_images[0].size())
+    print(batch_images[0])
+    #second dimensions is the numpy of images in atch
+    image = batch_images[0][0]
+    print(image.size())
+    image = image.permute(1, 2, 0).cpu().numpy()
+    print(type(image))
+    print(image.shape)
+    cv2.imshow("frame",image)
+    cv2.waitKey(0)  
+  
+    #closing all open windows  
+    cv2.destroyAllWindows()  
     #batch_tfms=aug_transforms(size=224)
 
     # # src = (ImageItemList.from_csv(path, csv_name=dataset_path +'list_attr_celeba.csv')

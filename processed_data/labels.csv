@@ -1,50 +1,51 @@
-fname,labels
-000002.jpg,Bags_Under_Eyes Big_Nose
-000003.jpg,Big_Lips
-000004.jpg,Attractive
-000005.jpg,Arched_Eyebrows Attractive Big_Lips
-000006.jpg,Arched_Eyebrows Attractive Big_Lips
-000007.jpg,5_o_Clock_Shadow Attractive Bags_Under_Eyes Big_Lips Big_Nose Black_Hair
-000008.jpg,5_o_Clock_Shadow Arched_Eyebrows Bags_Under_Eyes Big_Lips Black_Hair
-000009.jpg,Arched_Eyebrows Attractive Bangs Big_Lips
-000010.jpg,Attractive
-000011.jpg,Attractive Black_Hair
-000012.jpg,Attractive Bags_Under_Eyes Black_Hair
-000013.jpg,
-000014.jpg,Arched_Eyebrows Big_Nose Black_Hair
-000015.jpg,5_o_Clock_Shadow Bags_Under_Eyes Big_Nose
-000016.jpg,5_o_Clock_Shadow Bags_Under_Eyes
-000017.jpg,Black_Hair
-000018.jpg,Arched_Eyebrows Big_Nose
-000019.jpg,Arched_Eyebrows Attractive
-000020.jpg,Black_Hair
-000021.jpg,Big_Nose
-000022.jpg,Arched_Eyebrows Big_Lips
-000023.jpg,5_o_Clock_Shadow Attractive Big_Nose
-000024.jpg,Arched_Eyebrows Attractive Big_Lips
-000025.jpg,5_o_Clock_Shadow Bags_Under_Eyes Big_Nose
-000026.jpg,Attractive Big_Lips
-000027.jpg,Arched_Eyebrows Attractive Big_Lips Black_Hair
-000028.jpg,Attractive
-000029.jpg,Arched_Eyebrows Attractive Bangs
-000030.jpg,Bags_Under_Eyes Big_Nose
-000031.jpg,Bags_Under_Eyes
-000032.jpg,Bags_Under_Eyes Big_Nose
-000033.jpg,Attractive Black_Hair
-000034.jpg,Arched_Eyebrows Attractive
-000035.jpg,Arched_Eyebrows Attractive Big_Lips Black_Hair
-000036.jpg,Bags_Under_Eyes Big_Nose Black_Hair
-000037.jpg,Big_Lips Big_Nose
-000038.jpg,Attractive Bags_Under_Eyes Big_Nose
-000039.jpg,Arched_Eyebrows Attractive Big_Lips
-000040.jpg,Attractive Black_Hair
-000041.jpg,5_o_Clock_Shadow Attractive Black_Hair
-000042.jpg,Arched_Eyebrows Attractive
-000043.jpg,Arched_Eyebrows Attractive
-000044.jpg,Bags_Under_Eyes Big_Lips Big_Nose Black_Hair
-000045.jpg,Arched_Eyebrows Attractive Big_Lips
-000046.jpg,Attractive Bangs Big_Lips Black_Hair
-000047.jpg,Arched_Eyebrows Big_Lips Black_Hair
-000048.jpg,Bangs
-000049.jpg,Black_Hair
-000050.jpg,Attractive Black_Hair
+fname labels
+000001.jpg "Arched_Eyebrows Attractive Brown_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Pointy_Nose Smiling Straight_Hair Wearing_Earrings Wearing_Lipstick Young"
+000002.jpg "Bags_Under_Eyes Big_Nose Brown_Hair High_Cheekbones Mouth_Slightly_Open No_Beard Smiling Young"
+000003.jpg "Big_Lips Blurry Male Narrow_Eyes No_Beard Pointy_Nose Wavy_Hair Young"
+000004.jpg "Attractive No_Beard Pointy_Nose Straight_Hair Wearing_Earrings Wearing_Lipstick Wearing_Necklace Young"
+000005.jpg "Arched_Eyebrows Attractive Big_Lips Heavy_Makeup Narrow_Eyes No_Beard Pointy_Nose Wearing_Lipstick Young"
+000006.jpg "Arched_Eyebrows Attractive Big_Lips Brown_Hair Heavy_Makeup Mouth_Slightly_Open No_Beard Wavy_Hair Wearing_Earrings Wearing_Lipstick Young"
+000007.jpg "5_o_Clock_Shadow Attractive Bags_Under_Eyes Big_Lips Big_Nose Black_Hair Bushy_Eyebrows Male No_Beard Pointy_Nose Straight_Hair Young"
+000008.jpg "5_o_Clock_Shadow Arched_Eyebrows Bags_Under_Eyes Big_Lips Black_Hair Male No_Beard Pointy_Nose Young"
+000009.jpg "Arched_Eyebrows Attractive Bangs Big_Lips Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Oval_Face Pointy_Nose Rosy_Cheeks Smiling Wearing_Earrings Wearing_Lipstick Young"
+000010.jpg "Attractive Heavy_Makeup High_Cheekbones No_Beard Wavy_Hair Wearing_Lipstick Young"
+000011.jpg "Attractive Black_Hair Mouth_Slightly_Open No_Beard Smiling Young"
+000012.jpg "Attractive Bags_Under_Eyes Black_Hair Bushy_Eyebrows High_Cheekbones Male Mouth_Slightly_Open No_Beard Oval_Face Smiling Straight_Hair Young"
+000013.jpg "Blond_Hair High_Cheekbones Male Mouth_Slightly_Open No_Beard Oval_Face Smiling Straight_Hair Young"
+000014.jpg "Arched_Eyebrows Big_Nose Black_Hair Bushy_Eyebrows Heavy_Makeup High_Cheekbones No_Beard Smiling Wearing_Lipstick Wearing_Necklace Young"
+000015.jpg "5_o_Clock_Shadow Bags_Under_Eyes Big_Nose Male Narrow_Eyes No_Beard Straight_Hair Wearing_Necktie"
+000016.jpg "5_o_Clock_Shadow Bags_Under_Eyes Male Smiling Straight_Hair Young"
+000017.jpg "Black_Hair High_Cheekbones Mouth_Slightly_Open No_Beard Oval_Face Smiling Straight_Hair Young"
+000018.jpg "Arched_Eyebrows Big_Nose Blond_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open Narrow_Eyes No_Beard Pointy_Nose Rosy_Cheeks Smiling Wavy_Hair Wearing_Earrings Wearing_Lipstick Wearing_Necklace"
+000019.jpg "Arched_Eyebrows Attractive Blond_Hair Heavy_Makeup No_Beard Oval_Face Pale_Skin Wavy_Hair Wearing_Lipstick Wearing_Necklace Young"
+000020.jpg "Black_Hair Chubby Goatee Male Mouth_Slightly_Open Narrow_Eyes Sideburns Young"
+000021.jpg "Big_Nose Gray_Hair Male Mouth_Slightly_Open No_Beard Smiling Straight_Hair Wearing_Necktie"
+000022.jpg "Arched_Eyebrows Big_Lips Blond_Hair Heavy_Makeup No_Beard Rosy_Cheeks Wavy_Hair Wearing_Lipstick Wearing_Necklace Young"
+000023.jpg "5_o_Clock_Shadow Attractive Big_Nose Brown_Hair Male Mouth_Slightly_Open Narrow_Eyes No_Beard Pointy_Nose Smiling Straight_Hair Young"
+000024.jpg "Arched_Eyebrows Attractive Big_Lips Blond_Hair Heavy_Makeup Mouth_Slightly_Open No_Beard Wearing_Earrings Wearing_Lipstick Wearing_Necklace Young"
+000025.jpg "5_o_Clock_Shadow Bags_Under_Eyes Big_Nose Male Receding_Hairline Young"
+000026.jpg "Attractive Big_Lips No_Beard Straight_Hair Wearing_Lipstick Young"
+000027.jpg "Arched_Eyebrows Attractive Big_Lips Black_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Pointy_Nose Smiling Wavy_Hair Wearing_Lipstick Young"
+000028.jpg "Attractive Brown_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Pointy_Nose Smiling Wavy_Hair Wearing_Lipstick Young"
+000029.jpg "Arched_Eyebrows Attractive Bangs Blond_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Oval_Face Pointy_Nose Smiling Wavy_Hair Wearing_Earrings Wearing_Lipstick Young"
+000030.jpg "Bags_Under_Eyes Big_Nose Male No_Beard Wavy_Hair"
+000031.jpg "Bags_Under_Eyes Chubby High_Cheekbones Mouth_Slightly_Open No_Beard Oval_Face Receding_Hairline Smiling Young"
+000032.jpg "Bags_Under_Eyes Big_Nose Brown_Hair Male Mouth_Slightly_Open No_Beard Straight_Hair Wearing_Necktie"
+000033.jpg "Attractive Black_Hair Brown_Hair Male No_Beard Smiling Straight_Hair Young"
+000034.jpg "Arched_Eyebrows Attractive Brown_Hair Heavy_Makeup No_Beard Pointy_Nose Wavy_Hair Wearing_Lipstick Young"
+000035.jpg "Arched_Eyebrows Attractive Big_Lips Black_Hair Heavy_Makeup High_Cheekbones No_Beard Wavy_Hair Wearing_Lipstick Young"
+000036.jpg "Bags_Under_Eyes Big_Nose Black_Hair Male No_Beard Straight_Hair Young"
+000037.jpg "Big_Lips Big_Nose Bushy_Eyebrows Chubby Male Sideburns Wearing_Hat Young"
+000038.jpg "Attractive Bags_Under_Eyes Big_Nose High_Cheekbones Male Mouth_Slightly_Open No_Beard Smiling Young"
+000039.jpg "Arched_Eyebrows Attractive Big_Lips Brown_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Pointy_Nose Smiling Wavy_Hair Wearing_Earrings Wearing_Lipstick Young"
+000040.jpg "Attractive Black_Hair Heavy_Makeup No_Beard Oval_Face Wearing_Earrings Wearing_Lipstick Young"
+000041.jpg "5_o_Clock_Shadow Attractive Black_Hair High_Cheekbones Male Mouth_Slightly_Open Smiling Young"
+000042.jpg "Arched_Eyebrows Attractive Brown_Hair Heavy_Makeup High_Cheekbones No_Beard Oval_Face Pointy_Nose Rosy_Cheeks Smiling Wearing_Earrings Wearing_Lipstick Young"
+000043.jpg "Arched_Eyebrows Attractive Brown_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Oval_Face Pointy_Nose Smiling Wavy_Hair Wearing_Earrings Wearing_Lipstick Young"
+000044.jpg "Bags_Under_Eyes Big_Lips Big_Nose Black_Hair Bushy_Eyebrows No_Beard Wearing_Lipstick Wearing_Necklace Young"
+000045.jpg "Arched_Eyebrows Attractive Big_Lips Brown_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open Narrow_Eyes No_Beard Oval_Face Smiling Wavy_Hair Wearing_Earrings Wearing_Lipstick Young"
+000046.jpg "Attractive Bangs Big_Lips Black_Hair Heavy_Makeup High_Cheekbones Mouth_Slightly_Open No_Beard Pointy_Nose Smiling Wavy_Hair Wearing_Lipstick Young"
+000047.jpg "Arched_Eyebrows Big_Lips Black_Hair Double_Chin Heavy_Makeup High_Cheekbones Mouth_Slightly_Open Narrow_Eyes No_Beard Smiling Straight_Hair Wearing_Earrings Wearing_Lipstick Young"
+000048.jpg "Bangs Male No_Beard Pale_Skin Young"
+000049.jpg "Black_Hair Blurry Male Pointy_Nose Receding_Hairline"
+000050.jpg "Attractive Black_Hair Bushy_Eyebrows High_Cheekbones Male Mouth_Slightly_Open No_Beard Oval_Face Smiling Young"
